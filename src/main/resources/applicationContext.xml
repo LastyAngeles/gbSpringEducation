@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <bean id="maidservant" class="com.education.spring.variation.xml.servant.Maidservant">
+
+        <!--<property name="doge">-->
+            <!--<ref bean="dog"/>-->
+        <!--</property>-->
+        <!--<property name="catty">-->
+            <!--<ref bean="cat"/>-->
+        <!--</property>-->
+        <!--<property name="turtle">-->
+            <!--<ref bean="turtle"/>-->
+        <!--</property>-->
+
+        <constructor-arg ref="cat"></constructor-arg>
+        <constructor-arg ref="dog"></constructor-arg>
+        <constructor-arg ref="turtle"></constructor-arg>
+
+    </bean>
+
+    <bean id="cat" class="com.education.spring.variation.xml.farm.Cat"></bean>
+    <bean id="dog" class="com.education.spring.variation.xml.farm.Dog"></bean>
+    <bean id="turtle" class="com.education.spring.variation.xml.farm.Turtle"></bean>
+
+</beans>
